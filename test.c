@@ -1,7 +1,3 @@
-# cmap
-A C linked-list style map.
-
-``` C
 #include <stdio.h>
 #include <stdlib.h>
 #include "map.h"
@@ -20,4 +16,3 @@ int main() {
 	free(name);
 	free(gender);
 }
-```
