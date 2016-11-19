@@ -21,3 +21,7 @@ int main() {
 	free(gender);
 }
 ```
+
+```
+Monty male
+```
