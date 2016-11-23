@@ -47,11 +47,20 @@ char *map_get(map_t *map, char *key) {
 
 	while(step != NULL) {
 		if(strcmp(step->key, key) == 0) {
-			return strdup(step->value);
+			return step->value;
 		}
 
 		step = step->next;
 	}
 
 	return NULL;
+}
+
+void map_each(map_t *map, void (*func)(char *, char *)) {
+	map_node_t *step = map->first;
+
+	while(step != NULL) {
+		func(step->key, step->value);
+		step = step->next;
+	}
 }

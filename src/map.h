@@ -13,3 +13,4 @@ typedef struct {
 map_t *map_create();
 void map_set(map_t *map, char *key, char *value);
 char *map_get(map_t *map, char *key);
+void map_each(map_t *map, void (*func)(char *, char *));
